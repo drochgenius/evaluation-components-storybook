@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { Graph } from '../components/Graph';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import '@hmh/text-input';
@@ -21,7 +22,7 @@ storiesOf('Button', module)
     ));
 
 storiesOf('<text-input>', module).add('Default', () => <text-input />);
-storiesOf('<plat-graph>', module).add('Default', () => (
+storiesOf('<plot-graph>', module).add('Default', () => (
     <plot-graph>
         <coordinate-system slot="graph-axis">
             <div slot="axis" color="red" direction="x" min="-5" max="5" axis-visibility="visible" scale-visibility="visible" other-axes-crossing-point="0">
@@ -40,3 +41,5 @@ storiesOf('<plat-graph>', module).add('Default', () => (
         </div>
     </plot-graph>
 ));
+
+storiesOf('Graph', module).add('Default', () => <Graph />);
